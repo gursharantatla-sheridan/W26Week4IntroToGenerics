@@ -35,12 +35,14 @@ namespace GenericCollections
             // BAD - boxing/unboxing - performance impact
             // BAD - not type safe
 
+            // DO NOT USE IT
+
             ArrayList myArrayList = new ArrayList();
             myArrayList.Add(10);
             myArrayList.Add(20);
             myArrayList.Add(30);
 
-            myArrayList.Add("hello");
+            //myArrayList.Add("hello");
 
             sum = 0;
 
@@ -51,6 +53,31 @@ namespace GenericCollections
             }
 
             Console.WriteLine("\nSum of ArrayList items = " + sum);
+
+
+
+
+            // List
+            // GOOD - dynamic in size
+            // GOOD - no boxing/unboxing - better performance
+            // GOOD - type safe
+
+            List<int> myList = new List<int>();
+            myList.Add(10);
+            myList.Add(20);
+            myList.Add(30);
+
+            //myList.Add("hello");
+
+            sum = 0;
+
+            for (int i=0; i<myList.Count; i++)
+            {
+                int num = myList[i];
+                sum += num;
+            }
+
+            Console.WriteLine("\nSum of List items = " + sum);
         }
     }
 }
