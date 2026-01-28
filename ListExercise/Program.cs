@@ -18,6 +18,42 @@
 
             foreach (Employee emp in employees)
                 Console.WriteLine(emp + "\n");
+
+
+            // Search
+
+            // IndexOf
+            int index = employees.IndexOf(emp1);
+
+            if (index >= 0)
+                Console.WriteLine("It exists");
+            else
+                Console.WriteLine("Doesn't exist");
+
+
+            // Contains
+            if (employees.Contains(emp1))
+                Console.WriteLine("It exists");
+            else
+                Console.WriteLine("Doesn't exist");
+
+
+            // Exists
+            if (employees.Exists(e => e.Name
+                                       .ToUpper()
+                                       .StartsWith("A")))
+                Console.WriteLine("It exists");
+            else
+                Console.WriteLine("Doesn't exist");
+
+
+            // Find
+            var em = employees.Find(e => e.Salary > 6000);
+
+            if (em != null)
+                Console.WriteLine(em);
+            else
+                Console.WriteLine("Doesn't exist");
         }
     }
 }
