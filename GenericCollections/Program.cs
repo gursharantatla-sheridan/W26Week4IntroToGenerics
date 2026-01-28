@@ -1,4 +1,6 @@
-﻿namespace GenericCollections
+﻿using System.Collections;
+
+namespace GenericCollections
 {
     internal class Program
     {
@@ -29,7 +31,26 @@
 
 
             // ArrayList
+            // GOOD - dynamic in size
+            // BAD - boxing/unboxing - performance impact
+            // BAD - not type safe
 
+            ArrayList myArrayList = new ArrayList();
+            myArrayList.Add(10);
+            myArrayList.Add(20);
+            myArrayList.Add(30);
+
+            myArrayList.Add("hello");
+
+            sum = 0;
+
+            for (int i=0; i<myArrayList.Count; i++)
+            {
+                int num = (int)myArrayList[i];
+                sum += num;
+            }
+
+            Console.WriteLine("\nSum of ArrayList items = " + sum);
         }
     }
 }
