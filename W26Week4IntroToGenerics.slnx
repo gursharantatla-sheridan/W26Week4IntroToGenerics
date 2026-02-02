@@ -2,5 +2,7 @@
   <Project Path="DictionaryExample/DictionaryExample.csproj" Id="9ab8b5eb-aa55-4a7a-9392-4bbe7853e1b8" />
   <Project Path="GenericCollections/GenericCollections.csproj" />
   <Project Path="ListExercise/ListExercise.csproj" />
+  <Project Path="QueueExample/QueueExample.csproj" Id="5d611ab0-5366-4648-8fb5-ebd661f7678f" />
+  <Project Path="StackExample/StackExample.csproj" Id="1db68384-66e7-4dd0-abda-08c9213aa11d" />
   <Project Path="W26Week4IntroToGenerics/W26Week4IntroToGenerics.csproj" />
 </Solution>
