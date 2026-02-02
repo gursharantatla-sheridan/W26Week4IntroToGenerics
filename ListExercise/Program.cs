@@ -48,7 +48,7 @@
 
 
             // Find
-            var em = employees.Find(e => e.Salary > 6000);
+            var em = employees.Find(e => e.Salary > 4000);
 
             if (em != null)
                 Console.WriteLine(em);
